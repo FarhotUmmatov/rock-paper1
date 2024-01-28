@@ -16,6 +16,11 @@ function playRound(playerChoice, computerChoice) {
     const playerSelection = playerChoice.toLowerCase(); 
     const computerSelection = computerChoice.toLowerCase();
 
+    const validInput = ["rock", "paper", "scissors"];
+    if (!validInput.includes(playerSelection)) {
+        return "Invalid Input. Please enter rock, paper, or scissors.";
+    }
+
     if (playerSelection === computerSelection){
         return "It's tie! Try again!";
     } // if Computer wins
