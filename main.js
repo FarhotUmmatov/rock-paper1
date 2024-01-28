@@ -2,7 +2,7 @@
 //for the computer player in a Rock, Paper, Scissors game.
 
 function getComputerChoice() {
-    const randomValue = ["Rock", "Paper", "Scissors"];
+    const randomValue = ["rock", "paper", "scissors"];
     const randomIndex = Math.floor(Math.random() * randomValue.length);
     const choice = randomValue[randomIndex];
     return choice;
@@ -12,27 +12,24 @@ function getComputerChoice() {
 
 // a another new function
 
-function playRound(playerSelection, computerSelection) {
-    // if Computer wins
-    if (playerSelection === "rock" && computerSelection === "Paper") {
-        return "You lose! Paper beats the rock.";
-    } else if (playerSelection === "paper" && computerSelection === "Scissors") {
-        return "You lose! Scissors beats the paper.";
-    } else if (playerSelection === "scissors" && computerSelection === "Rock") {
-        return "You lose! Rock beats the scissors.";
-    } //if Player wins
-    else if (playerSelection === "paper" && computerSelection === "Rock") {
-        return "You win! Paper beats the rock.";
-    } else if (playerSelection === "rock" && computerSelection === "Scissors") {
-        return "You win! Rock beats the scissors.";
-    } else if (playerSelection === "scissors" && computerSelection === "Paper") {
-        return "You win! Scissors beats the paper.";
+function playRound(playerChoice, computerChoice) {
+    const playerSelection = playerChoice.toLowerCase(); 
+    const computerSelection = computerChoice.toLowerCase();
+
+    if (playerSelection === computerSelection){
+        return "It's tie! Try again!";
+    } // if Computer wins
+    else if ((playerSelection === "rock" && computerSelection === "paper")||
+             (playerSelection === "paper" && computerSelection === "scissors")||
+             (playerSelection === "scissors" && computerSelection === "rock")) 
+    {
+        return `You lose! ${computerSelection} beats ${playerSelection}!`;
     } else {
-        return "Try again!";
-    } 
+        return `You win!!! ${playerSelection} beats ${computerSelection}!`;
+    }
   }
    
-  const playerSelection = prompt("Enter your choice: rock, paper or scissors", "Paper");
-  const computerSelection = getComputerChoice();
-  console.log(playRound(playerSelection, computerSelection));
+  const playerChoice = prompt("Enter your choice: rock, paper or scissors", "Paper");
+  const computerChoice = getComputerChoice();
+  console.log(playRound(playerChoice, computerChoice));
   
