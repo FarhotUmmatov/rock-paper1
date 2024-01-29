@@ -59,6 +59,12 @@ function game() {
         console.log(`Computer choice: ${computerChoice}`);
         //Display Result
         console.log(`Result: ${result}`);
+
+        if (result.includes("You win!!!")) {
+            playerScore ++;       
+        } else if (result.includes("You lose!")){
+            computerScore++; //computerScore +=1;
+       }
         //Display Score
         console.log(`Score- Player: ${playerScore}, Computer: ${computerScore}.`);
         console.log("-------------------------------------");
@@ -66,11 +72,7 @@ function game() {
 
 
 
-        if (result.includes("You win!!!")) {
-            playerScore++; //playerScore += 1;       
-        } else if (result.includes("You lose!")){
-            computerScore++; //computerScore +=1;
-       }
+       
     }
 
     //Display Final Winner
@@ -85,7 +87,6 @@ function game() {
 
 }
    
-  const playerChoice = prompt("Enter your choice: rock, paper or scissors", "Paper");
-  const computerChoice = getComputerChoice();
+  console.log(game());  
   
   
