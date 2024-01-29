@@ -70,11 +70,11 @@ function game() {
 
     //Display Final Winner
     if (playerScore > computerScore) {
-        console.log(`You're the overall winner! 
-                    Score - You:${playerScore}, Computer: ${computerScore}`)
+        console.log(`You're the overall winner! \nScore - You:${playerScore}, Computer: ${computerScore}`)
     } else if (playerScore < computerScore){
-        console.log(`Computer is the overall winner! 
-        Score - Computer: ${computerScore}, You:${playerScore} `)
+        console.log(`Computer is the overall winner! \nScore - Computer: ${computerScore}, You:${playerScore} `)
+    }else {
+        console.log("It's a tie overall!");
     }
 
 
