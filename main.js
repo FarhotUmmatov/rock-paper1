@@ -45,6 +45,7 @@ function game() {
     let playerScore = 0;
     let computerScore = 0;
 
+    //Loop for Best-of-Five
     for (let i = 1; i <= 5; i++) {        
         
         const playerChoice = prompt("Enter your choice: rock, paper or scissors", "Paper");
@@ -72,10 +73,19 @@ function game() {
        }
     }
 
+    //Display Final Winner
+    if (playerScore > computerScore) {
+        console.log(`You're the overall winner! 
+                    Score - You:${playerScore}, Computer: ${computerScore}`)
+    } else if (playerScore < computerScore){
+        console.log(`Computer is the overall winner! 
+                    Score - Computer: ${computerScore}, You:${playerScore} `)
+    }
+
 
 }
    
   const playerChoice = prompt("Enter your choice: rock, paper or scissors", "Paper");
   const computerChoice = getComputerChoice();
-  console.log(playRound(playerChoice, computerChoice));
+  
   
