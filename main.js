@@ -44,6 +44,12 @@ function game() {
         const playerChoice = prompt("Enter your choice: rock, paper or scissors", "Paper");
         const computerChoice = getComputerChoice();
 
+        // if player cancels
+        if (playerChoice === null) {
+            console.log("See you next time!");
+            return;
+        }
+
         let result = playRound(playerChoice, computerChoice);
         //Set up a log output before the loop to present the results
         console.log(`Round: ${i}`);
