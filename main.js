@@ -74,7 +74,7 @@ function game() {
                     Score - You:${playerScore}, Computer: ${computerScore}`)
     } else if (playerScore < computerScore){
         console.log(`Computer is the overall winner! 
-                    Score - Computer: ${computerScore}, You:${playerScore} `)
+        Score - Computer: ${computerScore}, You:${playerScore} `)
     }
 
 
