@@ -34,13 +34,6 @@ function playRound(playerChoice, computerChoice) {
     }
   }
 
-/* function game() {
-    for (let i = 0; i < 5; i++) {
-    //
-        playRound();
-      }
-} */
-
 function game() {
     let playerScore = 0;
     let computerScore = 0;
@@ -87,6 +80,6 @@ function game() {
 
 }
    
-  console.log(game());  
+console.log(game());  
   
   
