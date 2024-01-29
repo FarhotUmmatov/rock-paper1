@@ -10,7 +10,7 @@ function getComputerChoice() {
 }
 
 
-// a another new function
+// a another new function to play for single round
 
 function playRound(playerChoice, computerChoice) {
     const playerSelection = playerChoice.toLowerCase(); 
@@ -33,6 +33,20 @@ function playRound(playerChoice, computerChoice) {
         return `You win!!! ${playerSelection} beats ${computerSelection}!`;
     }
   }
+
+/* function game() {
+    for (let i = 0; i < 5; i++) {
+    //
+        playRound();
+      }
+} */
+
+function game() {
+    const playerScore = 0;
+    const computerScore = 0;
+
+
+}
    
   const playerChoice = prompt("Enter your choice: rock, paper or scissors", "Paper");
   const computerChoice = getComputerChoice();
