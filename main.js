@@ -42,8 +42,35 @@ function playRound(playerChoice, computerChoice) {
 } */
 
 function game() {
-    const playerScore = 0;
-    const computerScore = 0;
+    let playerScore = 0;
+    let computerScore = 0;
+
+    for (let i = 1; i <= 5; i++) {        
+        
+        const playerChoice = prompt("Enter your choice: rock, paper or scissors", "Paper");
+        const computerChoice = getComputerChoice();
+
+        let result = playRound(playerChoice, computerChoice);
+        //Set up a log output before the loop to present the results
+        console.log(`Round: ${i}`);
+        //Add player and computer choices to the log
+        console.log(`Your choice: ${playerChoice}`);
+        console.log(`Computer choice: ${computerChoice}`);
+        //Display Result
+        console.log(`Result: ${result}`);
+        //Display Score
+        console.log(`Score- Player: ${playerScore}, Computer: ${computerScore}.`);
+        console.log("-------------------------------------");
+
+
+
+
+        if (result.includes("You win!!!")) {
+            playerScore++; //playerScore += 1;       
+        } else if (result.includes("You lose!")){
+            computerScore++; //computerScore +=1;
+       }
+    }
 
 
 }
