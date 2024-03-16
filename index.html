@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Stone</title>
-    <script src="main.js"></script>
+    
+    <style>
+        button {
+            color: rgb(255, 255, 255);
+            background-color: rgb(29, 113, 174);
+            border: 0;
+            border-radius: 3px;
+            display: inline-block;
+            margin: 30px;
+            flex-direction: row;
+            justify-content: center;
+        }
+        button:hover {
+            color:rgb(29, 113, 174);
+            background-color: rgb(208, 220, 229);
+            cursor: pointer;
+        }
+        div, h1 {
+            color: rgb(20, 88, 137);
+        }
+    </style>
 </head>
 <body>
     <h1>Rock-Paper-Scissors</h1>
+
+    <button id="paper">paper</button>
+    <button id="rock">rock</button>
+    <button id="scissors">scissors</button>
+    
+    <div id="result"></div>
+
+    <script src="main.js"></script>
 </body>
 </html>
